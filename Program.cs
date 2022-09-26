@@ -12,7 +12,7 @@
             while (foreverLoop)
             {
                 x = 1; y = 1; change = 1; change2 = 1;
-                int randXPosition = rand.Next(20, 120);
+                int randXPosition = rand.Next(20, 150);
                 int randYPosition = rand.Next(20, 80);
                 int countingToSize = (((randXPosition + randYPosition)/2)*20)+100;
                 continueToRun = true;
