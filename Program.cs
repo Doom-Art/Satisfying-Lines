@@ -12,15 +12,18 @@
             while (foreverLoop)
             {
                 x = 1; y = 1; change = 1; change2 = 1;
-                int randXPosition = rand.Next(20, 100);
-                int randYPosition = rand.Next(20, 100);
-                int countingToSize = ((randXPosition + randYPosition)/2)*20;
+                int randXPosition = rand.Next(20, 120);
+                int randYPosition = rand.Next(20, 80);
+                int countingToSize = (((randXPosition + randYPosition)/2)*20)+100;
                 continueToRun = true;
                 countReset = 0;
-                if (randXPosition == randYPosition)
-                    randYPosition--;
-                //Console.WriteLine($"\nrand X is: {randXPosition}, rand Y is {randYPosition}, counting Size is {countingToSize}");
-                //Console.ReadLine();
+                Console.Clear();
+                Console.CursorVisible = true;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine($"Your random X is {randXPosition}, Your Random Y is {randYPosition} and it will repeat {countingToSize} times.\n");
+                Console.WriteLine("What Symbol would you like for your satisfying lines?");
+                string symbol = Console.ReadLine();
+                Console.CursorVisible = false;
                 Console.Clear();
                 while (continueToRun)
                 {
@@ -47,7 +50,7 @@
                         Console.ForegroundColor = ConsoleColor.White;
                         countColor = 1;
                     }
-                    Console.Write("O");
+                    Console.Write(symbol);
 
                     Console.CursorVisible = false;
                     Thread.Sleep(20);
