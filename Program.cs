@@ -23,7 +23,7 @@
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine($"Your random X is {randXPosition}, Your Random Y is {randYPosition} and it will repeat {countingToSize} times.\n");
                 Console.WriteLine("What Symbol would you like for your satisfying lines?");
-                string symbol = Console.ReadLine();
+                string symbol = "***";  //Console.ReadLine();
                 Console.CursorVisible = false;
                 Console.Clear();
                 while (continueToRun)
@@ -48,7 +48,7 @@
                         countColor++;
                     }
                     else if (countColor == 5){
-                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         countColor++;
                     }
                     else if (countColor == 6){
