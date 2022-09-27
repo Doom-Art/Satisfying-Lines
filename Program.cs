@@ -14,9 +14,10 @@
                 x = 1; y = 1; change = 1; change2 = 1;
                 int randXPosition = rand.Next(20, 150);
                 int randYPosition = rand.Next(20, 60);
-                int countingToSize = (((randXPosition + randYPosition)/2)*20)+100;
+                int countingToSize = (((randXPosition + randYPosition)/2)*22)+100;
                 continueToRun = true;
                 countReset = 0;
+                Console.BackgroundColor = ConsoleColor.Black;
                 Console.Clear();
                 Console.CursorVisible = true;
                 Console.ForegroundColor = ConsoleColor.White;
@@ -47,10 +48,18 @@
                         countColor++;
                     }
                     else if (countColor == 5){
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
                         countColor++;
                     }
                     else if (countColor == 6){
+                        Console.ForegroundColor = ConsoleColor.DarkBlue;
+                        countColor++;
+                    }
+                    else if (countColor == 7){
+                        Console.ForegroundColor = ConsoleColor.White;
+                        countColor++;
+                    }
+                    else if (countColor == 8){
                         Console.ForegroundColor = ConsoleColor.Red;
                         countColor = 1;
                     }
